@@ -1,0 +1,27 @@
+name: Deploy MkDocs
+# Controls when the workflow will run
+on:
+  push:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - name: Deploy MkDocs
+        # uses: mhausenblas/mkdocs-deploy-gh-pages@68831f08f919b79d2bd3cee79dfd7d6e12c9722e
+        uses: mhausenblas/mkdocs-deploy-gh-pages@nomaterial
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
