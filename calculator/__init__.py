@@ -1,5 +1,7 @@
 """A module used to make basic calculations.
 
+It's also used for testing **crazy stuff**!
+
 * `add(a: float, b: float) -> float`:
   Return the sum of two numbers.
 * `subtract(a: float, b: float) -> float`:
