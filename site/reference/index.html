@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#calculator.calculations" class="md-skip">
+        <a href="#reference" class="md-skip">
           Skip to content
         </a>
       
@@ -172,7 +172,7 @@
   
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
-        Calculation Docs
+        Home
       </a>
     </li>
   
@@ -186,8 +186,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../explanation/" class="md-nav__link">
-        Explanation
+      <a href="../tutorial/" class="md-nav__link">
+        Tutorial
       </a>
     </li>
   
@@ -202,7 +202,7 @@
   
     <li class="md-nav__item">
       <a href="../how-to-guide/" class="md-nav__link">
-        How to guide
+        How-To Guide
       </a>
     </li>
   
@@ -222,6 +222,8 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Reference
@@ -236,6 +238,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -287,8 +291,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#calculator.calculations.substract" class="md-nav__link">
-    substract()
+  <a href="#calculator.calculations.subtract" class="md-nav__link">
+    subtract()
   </a>
   
 </li>
@@ -309,8 +313,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../tutorial/" class="md-nav__link">
-        Tutorial
+      <a href="../explanation/" class="md-nav__link">
+        Explanation
       </a>
     </li>
   
@@ -332,6 +336,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -382,8 +388,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#calculator.calculations.substract" class="md-nav__link">
-    substract()
+  <a href="#calculator.calculations.subtract" class="md-nav__link">
+    subtract()
   </a>
   
 </li>
@@ -401,14 +407,27 @@
               
                 
                 
-                  <h1>Reference</h1>
-                
-                <div class="doc doc-object doc-module">
+                <h1 id="reference">Reference</h1>
+<p>This part of the project documentation focuses on an <strong>information-oriented</strong> approach. Use it as a reference for the technical implementation of the <code>calculator</code> project code.</p>
+
+
+  <div class="doc doc-object doc-module">
 
 <a id="calculator.calculations"></a>
     <div class="doc doc-contents first">
 
       <p>Provide several sample math calculations.</p>
+<p>This script allows the user to make mathematical calculations.</p>
+<p>The file can also be imported as a module and contains the following
+functions:</p>
+<ul>
+<li><code>add</code> - returns the sum of two numbers</li>
+<li><code>subtract</code> - returns the difference of two numbers</li>
+<li><code>multiply</code> - returns the product of two numbers</li>
+<li><code>divide</code> - returns the quotient of two numbers</li>
+<li><code>power</code> - returns the base to the power of the exponent</li>
+<li><code>sqrt</code> - returns the square root of a number</li>
+</ul>
 
 
 
@@ -487,6 +506,7 @@
 <span class="sd">    Returns:</span>
 <span class="sd">        float: sum of the first and the second number</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 </code></pre></div>
         </details>
@@ -580,6 +600,7 @@
 <span class="sd">    Returns:</span>
 <span class="sd">        float: the quotient</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ZeroDivisionError</span><span class="p">(</span><span class="s2">&quot;division by zero&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span>
@@ -641,7 +662,7 @@
   <tbody>
     <tr>
       <td><code>float</code></td>
-      <td><p>float: the product of the first number multiplied with the second number</p></td>
+      <td><p>float: the product of the two numbers</p></td>
     </tr>
   </tbody>
 </table>
@@ -655,8 +676,9 @@
 <span class="sd">        b (float): second number</span>
 
 <span class="sd">    Returns:</span>
-<span class="sd">        float: the product of the first number multiplied with the second number</span>
+<span class="sd">        float: the product of the two numbers</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
 </code></pre></div>
         </details>
@@ -700,7 +722,7 @@
       <tr>
         <td><code>exponent</code></td>
         <td><code>float</code></td>
-        <td><p>the exponent used. Defaults to 2.</p></td>
+        <td><p>the exponent used. Defaults to 2</p></td>
         <td><code>2</code></td>
       </tr>
   </tbody>
@@ -727,11 +749,12 @@
 
 <span class="sd">    Args:</span>
 <span class="sd">        base (float): the base number</span>
-<span class="sd">        exponent (float, optional): the exponent used. Defaults to 2.</span>
+<span class="sd">        exponent (float, optional): the exponent used. Defaults to 2</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        float: the result of taking the base to the exponent</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="k">return</span> <span class="n">base</span> <span class="o">**</span> <span class="n">exponent</span>
 </code></pre></div>
         </details>
@@ -769,7 +792,7 @@
       <tr>
         <td><code>a</code></td>
         <td><code>float</code></td>
-        <td><p>the number that you want to take the square root from</p></td>
+        <td><p>the number that you want to take the square root of</p></td>
         <td><em>required</em></td>
       </tr>
   </tbody>
@@ -810,7 +833,7 @@
     <span class="sd">&quot;&quot;&quot;Return the square root of a.</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        a (float): the number that you want to take the square root from</span>
+<span class="sd">        a (float): the number that you want to take the square root of</span>
 
 <span class="sd">    Raises:</span>
 <span class="sd">        ValueError: raises if `a` is below `0`</span>
@@ -818,6 +841,7 @@
 <span class="sd">    Returns:</span>
 <span class="sd">        float: the square root of `a`</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;math domain error&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">**</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
@@ -833,8 +857,8 @@
 
 
 
-<h2 id="calculator.calculations.substract" class="doc doc-heading">
-<code class="highlight language-python"><span class="n">substract</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span></code>
+<h2 id="calculator.calculations.subtract" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">subtract</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span></code>
 
 
 </h2>
@@ -885,7 +909,7 @@
 </table>
         <details class="quote">
           <summary>Source code in <code>calculator/calculations.py</code></summary>
-          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">substract</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+          <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">subtract</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;Return the difference of two numbers.</span>
 
 <span class="sd">    Args:</span>
@@ -895,6 +919,7 @@
 <span class="sd">    Returns:</span>
 <span class="sd">        float: the difference between the minuend minus the subtrahend</span>
 <span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="k">return</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
 </code></pre></div>
         </details>
@@ -939,19 +964,19 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              How to guide
+              How-To Guide
             </div>
           </div>
         </a>
       
       
-        <a href="../tutorial/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../explanation/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Tutorial
+              Explanation
             </div>
           </div>
           <div class="md-footer__button md-icon">
